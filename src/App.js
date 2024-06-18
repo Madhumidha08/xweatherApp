@@ -19,11 +19,11 @@ const App = () => {
         `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`
       );
       setWeatherData(response.data);
-      setLoading(false);
     } catch (err) {
-      setLoading(false);
       setError('Failed to fetch weather data');
       alert('Failed to fetch weather data');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -47,7 +47,7 @@ const App = () => {
       </div>
       {loading && <p>Loading data…</p>}
       {error && <p>{error}</p>}
-      {weatherData && (
+      {weatherData && !loading && !error && (
         <div className="weather-cards">
           <div className="weather-card">
             <h2>{weatherData.location.name}</h2>
