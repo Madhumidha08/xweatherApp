@@ -1,45 +1,57 @@
-.App {
-  text-align: center;
-  font-family: Arial, sans-serif;
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:rgb(218, 236, 250);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 90vh;
+
 }
 
-.search-bar {
-  margin: 20px;
+.search-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.search-bar input {
-  padding: 10px;
-  font-size: 16px;
+.input {
+  padding: 5px;
+  width: 200px;
+  height: 20px;
+  border: none;
+  border-radius: 3px; 
 }
-
-.search-bar button {
-  padding: 10px 20px;
-  font-size: 16px;
-  margin-left: 10px;
-  cursor: pointer;
+.search-btn {
+  padding: 6px;
+  width: 60px;
+  border: none;
+  background-color: rgb(5, 159, 77);
+  font-weight: bold;
+  color: white;
+  border-radius: 3px; 
 }
 
 .weather-cards {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
 }
 
 .weather-card {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  width: 200px;
-  text-align: left;
-}
-
-.weather-card h2 {
-  margin: 0;
-  font-size: 24px;
-}
-
-.weather-card p {
-  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 210px;
+  height: 150px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+  text-align: center;
+  line-clamp: 2;
+  text-overflow: ellipsis;
 }
